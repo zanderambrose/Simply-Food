@@ -1,0 +1,25 @@
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5rem 0 ;
+}
+
+.iconCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 25%;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.iconCard:hover{
+    transform: scale(1.075);
+    box-shadow: 1px 2px 10px red;
+    transition: all 0.15s ease-in-out;
+}
+
+.iconImg{
+    width: 150px;
+}

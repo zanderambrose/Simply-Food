@@ -1,0 +1,61 @@
+.nav-list {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: black;
+    color: white;
+    margin-bottom: 0;
+}
+
+.nav-list li {
+    list-style-type: none;
+    padding: 1rem 0.5rem;
+}
+
+.nav-list li:hover{
+    background-color: grey;
+    transform: scale(1.085);
+    transition: all 0.2s ease-in-out;
+    border-radius: 5px;
+}
+
+.responsiveNav{
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .nav-list{
+       display: none;
+    }
+
+    .responsiveNav{
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        height: 10vh;
+        background-color: black;
+        color: white;
+        margin-bottom: 0;
+    }
+
+    .img1{
+        position: relative;
+        left: 7%;
+    }
+
+    .burgerMenu{
+        background-color: white;
+        width: 50px;
+        border-radius: 10px;
+        margin-left: auto;
+        position: relative;
+        right: 20px;
+    }
+
+    .burgerMenu:hover{
+        transform: scale(1.05);
+    }
+
+}

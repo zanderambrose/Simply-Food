@@ -1,0 +1,19 @@
+.landingPageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:stretch;
+    background-image: url(../Images/LandingPageImg3.jpg);
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.headingContainer{
+    position: relative;
+    left: 10%;
+    bottom: 8%;
+    color: white;
+}
+
