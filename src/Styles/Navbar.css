@@ -1,3 +1,5 @@
+/* Desktop Navigation Styling */
+
 .nav-list {
     width: 100vw;
     display: flex;
@@ -25,9 +27,11 @@
     display: none;
 }
 
+/* Mobile Navigation Styling */
+
 @media (max-width: 700px) {
     .nav-list{
-       display: none;
+        display: none;
     }
 
     .responsiveNav{
@@ -55,7 +59,7 @@
     }
 
     .burgerMenu:hover{
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 
 }
