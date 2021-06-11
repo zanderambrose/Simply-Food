@@ -9,17 +9,17 @@ function Icons() {
         <div>
             <div className="icons">
                 <div className="iconCard">
-                    <img className="iconImg" src={PantryImg} alt='Pantry Image' />
+                    <img className="iconImg" src={PantryImg} alt='Pantry' />
                     <h3>Whats in your pantry?</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div className="iconCard">
-                    <img className="iconImg" src={GetInspired} alt="burger and fries image" />
+                    <img className="iconImg" src={GetInspired} alt="burger and fries" />
                     <h3>Get Inspired</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
                 <div className="iconCard">
-                    <img className="iconImg" src={Cocktail} alt="cocktail image" />
+                    <img className="iconImg" src={Cocktail} alt="cocktail" />
                     <h3>Make a cocktail</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>

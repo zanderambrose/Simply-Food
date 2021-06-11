@@ -27,6 +27,42 @@
     display: none;
 }
 
+/* Mobile Nav Links Styling */
+
+    .mobileNavContainer{
+       
+    }
+
+    .mobileNavLinks{
+        animation: slidein 0.5s;
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        background-color: black;
+        color: white
+    }
+
+    .mobileNavLinks li:hover{
+    background-color: grey;
+    transform: scale(1.01);
+    transition: all 0.1s ease-in-out;
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+    }
+
+    @keyframes slidein {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
 /* Mobile Navigation Styling */
 
 @media (max-width: 700px) {
@@ -60,6 +96,10 @@
 
     .burgerMenu:hover{
         transform: scale(1.1);
+    }
+
+    .burgerMenu:active {
+        transform: scale(1.2)
     }
 
 }

@@ -3,18 +3,21 @@ import '../../Styles/Navbar.css'
 import BurgerMenu from '../../Images/BurgerMenu.png'
 import img1 from '../../Images/SimplyFoodLogo.png'
 import { useState } from 'react'
-import NavLinks from './NavLinks'
+import MobileNavLinks from './MobileNavLinks'
 
 function MobileNavigation() {
 
     const [open, setOpen] = useState(false)
+    const closeMobile = () => {
+        setOpen(false)
+    }
     return (
         <div>
             <section className="responsiveNav">
                 <img className="img1" src={img1} alt="food logo" />
-                <img className="burgerMenu" src={BurgerMenu} alt="menu" />
+                <img onClick={() => setOpen(!open)} className="burgerMenu" src={BurgerMenu} alt="menu" />
             </section>
-            {open && <NavLinks />}
+            {open && <MobileNavLinks closeMobile={closeMobile} />}
         </div>
     )
 }
