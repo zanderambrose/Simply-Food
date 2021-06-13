@@ -1,0 +1,59 @@
+/* Whats in your pantry Background Image Styles */
+.pantryContainer{
+    width: 100vw;
+    height: 90vh;
+    /* background-image: url(../Images/WhatsInYourPantry.jpg); */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Input.js Styles */
+.pantryInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+    margin: auto;
+    background-color: black;
+    opacity: 0.75;
+    padding: 3rem 1.5rem;
+}
+
+.pantryInput label{
+    color: white;
+    font-size: 2rem;
+}
+
+.pantryInput input{
+    width: 100%;
+    margin-top: 5%;
+}
+
+.pantryInput input:focus {
+    outline: none;
+}
+
+/* Display Data Styles */
+
+.dataContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid black;
+    max-width: 300px;
+    margin: auto;
+}
+
+.displayData img{
+    width: 200px;
+}
