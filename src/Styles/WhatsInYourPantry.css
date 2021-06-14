@@ -37,20 +37,19 @@
 
 /* Display Data Styles */
 
-.dataContainer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.displayContainer{
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: yellow;
 }
 
 .displayData{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 500px;
     padding: 1.5rem;
     border: 1px solid black;
-    max-width: 300px;
+   
     margin: auto;
 }
 
