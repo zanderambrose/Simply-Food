@@ -5,7 +5,7 @@ import ManipulateData from './ManipulateData'
 function Input() {
 
     const [input, setInput] = useState("")
-    const [saveState, setSaveState] = useState('')
+    const [saveState, setSaveState] = useState("")
 
     const handleChange = (e) => {
         setInput(e.target.value);
