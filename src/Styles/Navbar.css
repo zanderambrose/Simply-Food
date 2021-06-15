@@ -34,7 +34,6 @@
     }
 
     .mobileNavLinks{
-        animation: slidein 0.5s;
         height: 90vh;
         display: flex;
         flex-direction: column;
@@ -53,15 +52,6 @@
     padding: 1rem 0.5rem;
     }
 
-    @keyframes slidein {
-  from {
-    transform: translateX(100%);
-  }
-
-  to {
-    transform: translateX(0%);
-  }
-}
 
 /* Mobile Navigation Styling */
 
