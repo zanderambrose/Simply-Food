@@ -51,13 +51,13 @@ function DisplayData(props) {
     }, [string])
 
     return (
-        <div>
+        <div className="manipulateDataContainer">
             {dataId.map((item, index) => {
                 if (dataId.length === 4) {
                     return (
-                        <a href={item.sourceUrl} rel="noreferrer" target="_blank" key={item.id}>
-                            <h1>{item.title}</h1>
-                            <img src={item.image} alt="The recipe" />
+                        <a className="manipulateDataItem" href={item.sourceUrl} rel="noreferrer" target="_blank" key={item.id}>
+                            <h1 className="manipulateDataHeading">{item.title}</h1>
+                            <img className="manipulateDataImage" src={item.image} alt="The recipe" />
                         </a>
 
                     )
