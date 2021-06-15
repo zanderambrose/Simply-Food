@@ -1,8 +1,8 @@
 import React from 'react'
-import '../Styles/Icons.css'
-import PantryImg from '../Images/Pantry.jpg'
-import GetInspired from '../Images/Get-Inspired.jpg'
-import Cocktail from '../Images/Cocktail.jpg'
+import '../../Styles/Icons.css'
+import PantryImg from '../../Images/Pantry.jpg'
+import GetInspired from '../../Images/Get-Inspired.jpg'
+import Cocktail from '../../Images/Cocktail.jpg'
 
 function Icons() {
     return (

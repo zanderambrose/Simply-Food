@@ -1,6 +1,6 @@
 import React from 'react'
 import Icons from './Icons'
-import '../Styles/LandingPage.css'
+import '../../Styles/LandingPage.css'
 
 function LandingPage() {
     return (
