@@ -1,12 +1,44 @@
 import React from 'react'
+import CategoryRender from './CategoryRender'
+import AreaRender from './AreaRender'
+import { useState } from 'react'
 
 const GetInspiredInput = () => {
+
+    // State and functions for CATEGORY component
+    const [categoryValue, setCategoryValue] = useState('')
+    const [categoryPropValue, setCategoryPropValue] = useState('')
+
+    const handleCategoryInputChange = (e) => {
+        setCategoryValue(e.target.value)
+    }
+
+    const handleCategorySubmit = (e) => {
+        e.preventDefault()
+        setCategoryPropValue(categoryValue)
+        setCategoryValue('')
+    }
+
+    // State and function for AREA component
+    const [areaValue, setAreaValue] = useState('')
+    const [areaPropValue, setAreaPropValue] = useState('')
+
+    const handleAreaInputChange = (e) => {
+        setAreaValue(e.target.value)
+    }
+
+    const handleAreaSubmit = (e) => {
+        e.preventDefault()
+        setAreaPropValue(areaValue)
+        setAreaValue('')
+    }
+
     return (
         <div>
             <section>
-                <form>
-                    <label for="category-select">Get inspired by category!</label>
-                    <select name="category" id="category-select">
+                <form onSubmit={handleCategorySubmit}>
+                    <label htmlFor="category-select">Get inspired by category!</label>
+                    <select value={categoryValue} onChange={handleCategoryInputChange} name="category" id="category-select">
                         <option value="">--Please choose an option--</option>
                         <option value="Beef">Beef</option>
                         <option value="Breakfast">Breakfast</option>
@@ -23,16 +55,16 @@ const GetInspiredInput = () => {
                         <option value="Vegetarian">Vegetarian</option>
                     </select>
                     <div>
-                        <button type="submit">Submit</button>
+                        <input type="submit" value="Submit" />
                     </div>
                 </form>
-                {/* Render Results using && */}
+                {categoryPropValue && <CategoryRender categoryPropValue={categoryPropValue} />}
             </section>
 
             <section>
-                <form>
-                    <label for="area-select">Get inspired by area!</label>
-                    <select name="area" id="area-select">
+                <form onSubmit={handleAreaSubmit}>
+                    <label htmlFor="area-select">Get inspired by area!</label>
+                    <select value={areaValue} onChange={handleAreaInputChange} name="area" id="area-select">
                         <option value="">--Please choose an option--</option>
                         <option value="American">American</option>
                         <option value="British">British</option>
@@ -64,7 +96,7 @@ const GetInspiredInput = () => {
                         <button type="submit">Submit</button>
                     </div>
                 </form>
-                {/* Render Results using && */}
+                {areaPropValue && <AreaRender areaPropValue={areaPropValue} />}
             </section>
 
             <section>

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import ManipulateData from './ManipulateData'
 
+
 function Input() {
 
     const [input, setInput] = useState("")
