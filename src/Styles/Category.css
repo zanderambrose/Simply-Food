@@ -1,0 +1,107 @@
+/* Input Syles */
+.categoryInputContainer{
+    padding: 1rem;
+    background-color: white;
+    width: 100vw;
+    margin: 0 auto;
+    background: #FAFAFA;
+    background: -moz-linear-gradient(left, #FAFAFA 0%, #E3E3E3 100%, #C5C5C5 100%);
+    background: -webkit-linear-gradient(left, #FAFAFA 0%, #E3E3E3 100%, #C5C5C5 100%);
+    background: linear-gradient(to right, #FAFAFA 0%, #E3E3E3 100%, #C5C5C5 100%);
+}
+
+.categoryForm{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.categoryLabel{
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin: auto;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.categorySelect{
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    outline: none;
+}
+
+.categorySelect:hover{
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 6px 15px 5px rgba(0,0,0,0.47); 
+    box-shadow: 0px 6px 15px 5px rgba(0, 0, 0, 0.158);
+}
+
+.categoryInputSubmit{
+    border-radius: 20px;
+    padding: 0.25rem 1.5rem;
+    background-color: orange;
+}
+
+.categoryInputSubmit:hover{
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 6px 15px 5px rgba(0,0,0,0.47); 
+    box-shadow: 0px 6px 15px 5px rgba(0, 0, 0, 0.158);
+}
+
+/* Display Styles */
+.categoryDisplayContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 90vw;
+    margin: 1rem auto;
+    
+}
+
+.categoryItemContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 6px 15px 5px rgba(0,0,0,0.47); 
+    box-shadow: 0px 6px 15px 5px rgba(0, 0, 0, 0.158);
+}
+
+.categoryItemContainer:hover {
+   transform: scale(1.05);
+}
+
+.categoryItemContainer h1{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.categoryItemContainer img {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 1rem;
+}
+
+.categoryItemContainer a {
+    text-decoration:  none;
+    text-align: center;
+}
+
+.categoryItemContainer a button{
+    border-radius: 20px;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.categoryItemContainer a button:hover{
+    transform: scale(1.05);
+}

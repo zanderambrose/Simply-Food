@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import '../../Styles/Category.css'
 
 const CategoryRender = (props) => {
     const categoryInputValue = props.categoryPropValue
@@ -40,12 +41,13 @@ const CategoryRender = (props) => {
     }, [categoryInputValue])
 
     return (
-        <div>
+        <div className="categoryDisplayContainer">
             {apiResult.map(item => {
                 return (
-                    <div key={item[0].idMeal}>
-                        <h1>{item[0].strMeal}</h1>
+                    <div className="categoryItemContainer" key={item[0].idMeal}>
                         <img src={item[0].strMealThumb} alt="food thumbnail" />
+                        <h1>{item[0].strMeal}</h1>
+                        <a href={item[0].strSource} target='_blank' rel="noreferrer"><button>Click for Recipe</button></a>
                     </div>
                 )
             })}

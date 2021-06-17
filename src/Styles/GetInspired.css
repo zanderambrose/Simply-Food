@@ -1,0 +1,94 @@
+/* Input Syles */
+.inspiredInputContainer{
+    padding: 1rem;
+    background-color: white;
+    width: 100vw;
+    margin: 0 auto;
+    background: #FAFAFA;
+    background: -moz-linear-gradient(left, #FAFAFA 0%, #E3E3E3 100%, #C5C5C5 100%);
+    background: -webkit-linear-gradient(left, #FAFAFA 0%, #E3E3E3 100%, #C5C5C5 100%);
+    background: linear-gradient(to right, #FAFAFA 0%, #E3E3E3 100%, #C5C5C5 100%);
+}
+
+.inspiredForm{
+    margin: auto;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    margin: auto;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.inspiredBtnContainer{
+    width: 100vw;
+    display: flex;
+}
+
+.inspiredInputSubmit{
+    border-radius: 20px;
+    padding: 0.25rem 1.5rem;
+    background-color: orange;
+    margin: 0 auto
+}
+
+.inspiredInputSubmit:hover{
+    transform: scale(1.05);
+    -webkit-box-shadow: 0px 6px 15px 5px rgba(0,0,0,0.47); 
+    box-shadow: 0px 6px 15px 5px rgba(0, 0, 0, 0.158);
+}
+
+/* Display Styles */
+.inspiredDisplayContainer{
+    width: 50vw;
+    margin: 1rem auto;
+    
+}
+
+.inspiredItemContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 6px 15px 5px rgba(0,0,0,0.47); 
+    box-shadow: 0px 6px 15px 5px rgba(0, 0, 0, 0.158);
+}
+
+.inspiredItemContainer:hover {
+   transform: scale(1.05);
+}
+
+.inspiredItemContainer h1{
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: bold;
+}
+
+.inspiredItemContainer img {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 1rem;
+}
+
+.inspiredItemContainer a {
+    text-decoration:  none;
+    text-align: center;
+}
+
+.inspiredItemContainer a button{
+    border-radius: 20px;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+.inspiredItemContainer a button:hover{
+    transform: scale(1.05);
+}

@@ -1,7 +1,12 @@
 import React from 'react'
 import CategoryRender from './CategoryRender'
 import AreaRender from './AreaRender'
+import RandomRender from './RandomRender'
 import { useState } from 'react'
+import '../../Styles/Category.css'
+import '../../Styles/Area.css'
+import '../../Styles/GetInspired.css'
+import axios from 'axios'
 
 const GetInspiredInput = () => {
 
@@ -33,12 +38,22 @@ const GetInspiredInput = () => {
         setAreaValue('')
     }
 
+    // State and function for RANDOM component
+    const [isRandomBtnClicked, setIsRandomBtnClicked] = useState(false)
+    const [randomApiResult, setRandomApiResult] = useState([])
+    const handleRandomBtnClick = async () => {
+        setIsRandomBtnClicked(true)
+        const fetchRandomApi = await axios.get("https://www.themealdb.com/api/json/v1/1/random.php")
+        const randomApiData = await fetchRandomApi.data
+        setRandomApiResult(randomApiData)
+    }
     return (
         <div>
-            <section>
-                <form onSubmit={handleCategorySubmit}>
-                    <label htmlFor="category-select">Get inspired by category!</label>
-                    <select value={categoryValue} onChange={handleCategoryInputChange} name="category" id="category-select">
+            {/* CATEGORY */}
+            <section className="categoryInputContainer">
+                <form className="categoryForm" onSubmit={handleCategorySubmit}>
+                    <label className="categoryLabel" htmlFor="category-select">Get inspired by category!</label><br />
+                    <select className="categorySelect" value={categoryValue} onChange={handleCategoryInputChange} name="category" id="category-select">
                         <option value="">--Please choose an option--</option>
                         <option value="Beef">Beef</option>
                         <option value="Breakfast">Breakfast</option>
@@ -55,16 +70,17 @@ const GetInspiredInput = () => {
                         <option value="Vegetarian">Vegetarian</option>
                     </select>
                     <div>
-                        <input type="submit" value="Submit" />
+                        <input type="submit" value="Submit" className="categoryInputSubmit" />
                     </div>
                 </form>
                 {categoryPropValue && <CategoryRender categoryPropValue={categoryPropValue} />}
             </section>
 
-            <section>
-                <form onSubmit={handleAreaSubmit}>
-                    <label htmlFor="area-select">Get inspired by area!</label>
-                    <select value={areaValue} onChange={handleAreaInputChange} name="area" id="area-select">
+            {/* AREA */}
+            <section className="areaInputContainer">
+                <form className="areaForm" onSubmit={handleAreaSubmit}>
+                    <label className="areaLabel" htmlFor="area-select">Get inspired by area!</label><br />
+                    <select className="areaSelect" value={areaValue} onChange={handleAreaInputChange} name="area" id="area-select">
                         <option value="">--Please choose an option--</option>
                         <option value="American">American</option>
                         <option value="British">British</option>
@@ -93,16 +109,19 @@ const GetInspiredInput = () => {
                         <option value="Vietnamese">Vietnamese</option>
                     </select>
                     <div>
-                        <button type="submit">Submit</button>
+                        <button className="areaInputSubmit" type="submit">Submit</button>
                     </div>
                 </form>
                 {areaPropValue && <AreaRender areaPropValue={areaPropValue} />}
             </section>
 
-            <section>
-                <p>Get inspired by a random meal!</p>
-                <button type="submit">Click button for random meal</button>
-                {/* Render Results using && */}
+            {/* RANDOM */}
+            <section className="inspiredInputContainer">
+                <p className="inspiredForm">Get inspired by a random meal!</p>
+                <div className="inspiredBtnContainer">
+                    <button className="inspiredInputSubmit" onClick={handleRandomBtnClick} type="submit">Click button for random meal</button>
+                </div>
+                {isRandomBtnClicked && <RandomRender apiData={randomApiResult} />}
             </section>
         </div>
     )
