@@ -1,9 +1,10 @@
 import React from 'react'
+import CocktailInput from './CocktailInput'
 
 const Cocktail = () => {
     return (
         <div>
-            Hello World
+            <CocktailInput />
         </div>
     )
 }
