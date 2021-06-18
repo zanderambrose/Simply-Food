@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function MobileNavLinks(props) {
@@ -7,9 +8,9 @@ function MobileNavLinks(props) {
     return (
         <div className="mobileNavContainer">
             <ul className="mobileNavLinks">
-                <li onClick={() => props.closeMobile()} >Whats in your pantry</li>
-                <li onClick={() => props.closeMobile()}>Get inspired</li>
-                <li onClick={() => props.closeMobile()}>Make a cocktail</li>
+                <Link to="/pantry"><li onClick={() => props.closeMobile()} >Whats in your pantry</li></Link>
+                <Link to="/inspired"><li onClick={() => props.closeMobile()}>Get inspired</li></Link>
+                <Link to="/cocktail"><li onClick={() => props.closeMobile()}>Make a cocktail</li></Link>
             </ul>
         </div>
     )
