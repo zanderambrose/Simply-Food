@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './Components/Navigation/Navbar'
+import Footer from './Components/Footer/Footer'
 import LandingPage from './Components/LandingPage/LandingPage'
 import Pantry from './Components/Pantry/Pantry'
 import GetInspired from './Components/GetInspired/GetInspired'
@@ -27,6 +28,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Footer />
       </div>
     </Router>
   );

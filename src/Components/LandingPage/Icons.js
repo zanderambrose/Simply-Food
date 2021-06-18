@@ -11,7 +11,7 @@ function Icons() {
             <div className="icons">
                 <div className="iconCard"><Link to="/pantry">
                     <img className="iconImg" src={PantryImg} alt='Pantry' />
-                    <h3>Whats in your pantry?</h3>
+                    <h3>Whats in your pantry</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </Link>
                 </div>
