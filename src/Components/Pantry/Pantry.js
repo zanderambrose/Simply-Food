@@ -1,11 +1,13 @@
 import React from 'react'
-import '../../Styles/WhatsInYourPantry.css'
 import Input from './Input'
+// import '../../Styles/WhatsInYourPantry.css'
+
+
 
 function Pantry() {
 
     return (
-        <div className="pantryContainer">
+        <div className="userInputContainer">
             <Input />
         </div>
     )

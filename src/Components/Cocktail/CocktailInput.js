@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import TypeRender from './TypeRender'
 import IngredientsRender from './IngredientsRender'
+import '../../Styles/UserInputs.css'
 
 const CocktailInput = () => {
     // State and functions for TYPE component
@@ -36,10 +37,10 @@ const CocktailInput = () => {
     return (
         <div>
             {/* TYPE */}
-            <section>
-                <form onSubmit={handleTypeSubmit}>
-                    <label>What type of drink would you like to make?</label><br />
-                    <select onChange={handleTypeInputChange} value={typeValue}>
+            <section className="userInputContainer">
+                <form className="userForm" onSubmit={handleTypeSubmit}>
+                    <label className="userLabel">What type of drink would you like to make?</label><br />
+                    <select className="userSelect" onChange={handleTypeInputChange} value={typeValue}>
                         <option value="">--Please Choose an Option--</option>
                         <option value="Ordinary Drink">Ordinary Drink</option>
                         <option value="Cocktail">Cocktail</option>
@@ -49,17 +50,17 @@ const CocktailInput = () => {
                         <option value="Beer">Beer</option>
                     </select>
                     <div>
-                        <input type="submit" value="Submit" className="typeInputSubmit" />
+                        <input type="submit" value="Submit" className="userInputSubmit" />
                     </div>
                 </form>
                 {typePropValue && <TypeRender typePropValue={typePropValue} />}
             </section>
 
             {/* INGREDIENTS */}
-            <section>
-                <form onSubmit={handleIngredientsSubmit}>
-                    <label>What ingredient do you have?</label><br />
-                    <select onChange={handleIngredientsInputChange} value={ingredientsValue}>
+            <section className="userInputContainer">
+                <form className="userForm" onSubmit={handleIngredientsSubmit}>
+                    <label className="userLabel">What ingredient do you have?</label><br />
+                    <select className="userSelect" onChange={handleIngredientsInputChange} value={ingredientsValue}>
                         <option value="">--Please Choose an Option--</option>
                         <option value="Light rum">Light rum</option>
                         <option value="Applejack">Applejack</option>
@@ -109,7 +110,7 @@ const CocktailInput = () => {
                         <option value="Sambuca">Sambuca</option>
                     </select>
                     <div>
-                        <input type="submit" value="Submit" className="ingredientInputSubmit" />
+                        <input type="submit" value="Submit" className="userInputSubmit" />
                     </div>
                 </form>
                 {ingredientsPropValue && <IngredientsRender ingredientsPropValue={ingredientsPropValue} />}

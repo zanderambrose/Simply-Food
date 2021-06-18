@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import '../../Styles/CardsDisplay.css'
+
 
 const IngredientsRender = (props) => {
     const ingredientsInputValue = props.ingredientsPropValue.split(' ').join('_')
@@ -40,10 +42,10 @@ const IngredientsRender = (props) => {
     }, [ingredientsInputValue])
 
     return (
-        <div className="typeDisplayContainer">
+        <div className="cardsDisplayContainer">
             {apiResult.map(item => {
                 return (
-                    <div className="typeItemContainer" key={item[0].idDrink}>
+                    <div className="cardsItemContainer" key={item[0].idDrink}>
                         <img src={item[0].strDrinkThumb} alt="food thumbnail" />
                         <h1>{item[0].strDrink}</h1>
                     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import ManipulateData from './ManipulateData'
-
+import '../../Styles/UserInputs.css'
 
 function Input() {
 
@@ -22,10 +22,13 @@ function Input() {
 
     return (
         <div>
-            <div className="pantryInput">
-                <form onSubmit={handleSubmit} className="pantryForm">
-                    <label>Enter the ingredients you have for dinner</label>
-                    <input value={input} onChange={handleChange} type='text' placeholder="What's in your pantry?" />
+            <div className="userInputContainer">
+                <form onSubmit={handleSubmit} className="userForm">
+                    <label className="userLabel">Enter the ingredients you have for dinner</label><br />
+                    <input className="userSelect" value={input} onChange={handleChange} type='text' placeholder="What's in your pantry?" />
+                    <div>
+                        <input type="submit" value="Submit" className="userInputSubmit" />
+                    </div>
                 </form>
             </div>
             {saveState && <ManipulateData saveState={saveState} />}

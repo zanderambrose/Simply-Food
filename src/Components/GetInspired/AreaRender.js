@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import { useState, useEffect } from 'react'
-import '../../Styles/Area.css'
+import '../../Styles/CardsDisplay.css'
 
 const AreaRender = (props) => {
     const areaInputValue = props.areaPropValue
@@ -41,11 +41,10 @@ const AreaRender = (props) => {
     }, [areaInputValue])
 
     return (
-        <div className="areaDisplayContainer">
-            {console.log(apiResult)}
+        <div className="cardsDisplayContainer">
             {apiResult.map(item => {
                 return (
-                    <div className="areaItemContainer" key={item[0].idMeal}>
+                    <div className="cardsItemContainer" key={item[0].idMeal}>
                         <img src={item[0].strMealThumb} alt="food thumbnail" />
                         <h1>{item[0].strMeal}</h1>
                         <a href={item[0].strSource} target='_blank' rel="noreferrer"><button>Click for Recipe</button></a>

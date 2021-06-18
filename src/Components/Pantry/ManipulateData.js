@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import '../../Styles/CardsDisplay.css'
 
 
 function DisplayData(props) {
@@ -51,14 +52,14 @@ function DisplayData(props) {
     }, [string])
 
     return (
-        <div className="manipulateDataContainer">
+        <div className="cardsDisplayContainer">
             {dataId.map((item, index) => {
                 if (dataId.length === 4) {
                     return (
-                        <a className="manipulateDataItem" href={item.sourceUrl} rel="noreferrer" target="_blank" key={item.id}>
-                            <h1 className="manipulateDataHeading">{item.title}</h1>
+                        <div className="cardsItemContainer" href={item.sourceUrl} rel="noreferrer" target="_blank" key={item.id}>
                             <img className="manipulateDataImage" src={item.image} alt="The recipe" />
-                        </a>
+                            <h1 className="manipulateDataHeading">{item.title}</h1>
+                        </div>
 
                     )
                 } else {

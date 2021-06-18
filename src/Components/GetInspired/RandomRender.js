@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import '../../Styles/GetInspired.css'
+import '../../Styles/CardsDisplay.css'
 
 
 const RandomRender = (props) => {
@@ -13,11 +13,10 @@ const RandomRender = (props) => {
     }, [apiResult])
 
     return (
-        <div className="inspiredDisplayContainer">
-            {console.log(displayApiData)}
+        <div className="cardsDisplayContainer randomMealContainer">
             {displayApiData.map((item) => {
                 return (
-                    <div className="inspiredItemContainer" key={item.idMeal}>
+                    <div className="cardsItemContainer" key={item.idMeal}>
                         <img src={item.strMealThumb} alt="food thumbnail" />
                         <h1>{item.strMeal}</h1>
                         <a href={item.strSource} target='_blank' rel="noreferrer"><button>Click for Recipe</button></a>
