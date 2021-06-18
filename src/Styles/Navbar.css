@@ -3,17 +3,25 @@
 .nav-list {
     width: 100vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
     height: 10vh;
     background-color: black;
     color: white;
-    margin-bottom: 0;
+    margin: 0;
+    margin-right: 10vw;
+    padding-left: 0;
+}
+
+.nav-list img{
+    margin-left: 10vw;
 }
 
 .nav-list li {
     list-style-type: none;
-    padding: 1rem 0.5rem;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    color: white
 }
 
 .nav-list li:hover{
@@ -23,17 +31,20 @@
     border-radius: 5px;
 }
 
+.nav-list a{
+    text-decoration: none;
+}
+
 .responsiveNav{
     display: none;
 }
 
 /* Mobile Nav Links Styling */
 
-    .mobileNavContainer{
-       
-    }
 
     .mobileNavLinks{
+        padding: 0;
+        margin: 0;
         height: 90vh;
         display: flex;
         flex-direction: column;
@@ -44,7 +55,12 @@
         color: white
     }
 
-    .mobileNavLinks li:hover{
+    .mobileNavLinks a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .mobileNavLinks a:hover{
     background-color: grey;
     transform: scale(1.01);
     transition: all 0.1s ease-in-out;
@@ -56,6 +72,7 @@
 /* Mobile Navigation Styling */
 
 @media (max-width: 700px) {
+
     .nav-list{
         display: none;
     }
@@ -72,7 +89,7 @@
 
     .img1{
         position: relative;
-        left: 7%;
+        left: 10vw;
     }
 
     .burgerMenu{
@@ -92,4 +109,19 @@
         transform: scale(1.2)
     }
 
+}
+
+/* NAVIGATION LINKS BREAKING POINT */ 
+@media (max-width: 878px) and (min-width: 701px){
+    .nav-list{
+        margin-right: 5vw;
+    }
+
+    .nav-list li {
+        padding: 1rem;
+    }
+    .img1{
+        position: relative;
+        left: -5vw;
+    }
 }
