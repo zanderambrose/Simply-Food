@@ -27,7 +27,7 @@
 .nav-list li:hover{
     background-color: #6a040f;
     transform: scale(1.05);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
     border-radius: 5px;
 }
 
@@ -61,11 +61,12 @@
     }
 
     .mobileNavLinks a:hover{
-    background-color: grey;
-    transform: scale(1.01);
+    background-color: #6a040f;
+    transform: scale(1.05);
     transition: all 0.1s ease-in-out;
     border-radius: 5px;
-    padding: 1rem 0.5rem;
+    color: white;
+     padding: 1rem 1.5rem;
     }
 
 
@@ -123,5 +124,11 @@
     .img1{
         position: relative;
         left: -5vw;
+    }
+}
+
+@media (max-height: 600px){
+    .img1{
+        width: 80%;
     }
 }

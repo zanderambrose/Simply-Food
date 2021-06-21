@@ -53,7 +53,7 @@
         max-width: 170px;
         position: relative;
         left: 0%;
-        bottom: 15%;
+        bottom: 10%;
         text-align: center;
         color:white;
         font-size: 1.25rem;
@@ -63,8 +63,27 @@
         padding: 1.75rem;
     }
 
+    .headingContainer h1{
+        position: relative;
+        right: 9%;
+    }
+
     .landingPageBtn{
-        padding: 1rem 2rem
+        padding: 1rem 1rem;
+        position: relative;
+        right: 10%;
     }
 }
 
+@media (max-height: 600px){
+    .headingContainer{
+    font-size: 1rem;
+}
+}
+
+@media(max-width:800px) and (min-width:701px){
+    .headingContainer{
+        position: relative;
+        left: 7%;
+    }
+}

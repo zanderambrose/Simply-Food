@@ -69,7 +69,17 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-    width: 90vw;
+    width: 80vw;
     margin: 1rem auto;
+}
+
+.cardsItemContainer a button{
+    border-radius: 20px;
+    padding: 0.25rem 0.5rem;
+    margin-bottom: 0.5rem;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem;
 }
 }

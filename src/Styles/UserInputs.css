@@ -54,3 +54,29 @@
     display: flex;
     justify-content: center;
 }
+
+@media (max-width:700px){
+    .userInputContainer{
+        margin-right: 0px;
+        padding:1rem 0
+    }
+
+    .userSelect{
+        position: relative;
+        right: 7%;
+    }
+}
+
+@media(max-width:1550px) and (min-width:701px){
+    .userInputContainer{
+        margin-right: 0px;
+        padding:1rem 0
+    }
+}
+
+@media(max-width: 350px){
+    .userSelect{
+        position: relative;
+        right: 18%;
+    }
+}
