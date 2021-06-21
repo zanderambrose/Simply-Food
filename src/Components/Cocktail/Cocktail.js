@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import CocktailInput from './CocktailInput'
 
 const Cocktail = () => {
@@ -9,6 +10,11 @@ const Cocktail = () => {
         textDecoration: "underline",
         textTransform: "uppercase",
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     return (
         <div>
             <h1 style={myStyles}>Make A Cocktail!</h1>

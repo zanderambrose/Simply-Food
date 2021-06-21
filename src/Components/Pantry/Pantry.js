@@ -1,17 +1,23 @@
 import React from 'react'
 import Input from './Input'
-// import '../../Styles/WhatsInYourPantry.css'
+import { useEffect } from 'react'
 
 
 
 function Pantry() {
     const myStyles = {
         textAlign: "center",
-        margin: "1rem auto",
+        margin: "0 auto",
+        padding: "1rem 0",
         fontSize: "4rem",
         textDecoration: "underline",
-        textTransform: "uppercase",
+        textTransform: "uppercase"
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+
     return (
         <div className="userInputContainer">
             <h1 style={myStyles}>What's In Your Pantry?</h1>
