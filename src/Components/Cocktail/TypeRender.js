@@ -2,13 +2,18 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../../Styles/CardsDisplay.css'
+import * as ReactBootstrap from 'react-bootstrap'
+// import { Modal } from 'react-bootstrap'
 
 const TypeRender = (props) => {
     const typeInputValue = props.typePropValue.split(' ').join('_')
     const [apiResult, setApiResult] = useState([])
+    const [loading, setLoading] = useState(false)
+    // const [modal, setModal] = useState(false)
     useEffect(() => {
         const fetchTypeApi = async () => {
             try {
+                setLoading(true)
                 // Get api result based on user input
                 if (typeInputValue) {
                     const typeApiResult = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${typeInputValue}`)
@@ -26,6 +31,7 @@ const TypeRender = (props) => {
                                 containerArr.push(apiIdItem.data.drinks)
                             }
                             await setApiResult(containerArr)
+                            setLoading(false)
                         } catch (error) {
                             console.log(error)
                         }
@@ -41,16 +47,21 @@ const TypeRender = (props) => {
     }, [typeInputValue])
 
     return (
-        <div className="cardsDisplayContainer">
-            {apiResult.map(item => {
-                return (
-                    <div className="cardsItemContainer" key={item[0].idDrink}>
-                        <img src={item[0].strDrinkThumb} alt="food thumbnail" />
-                        <h1>{item[0].strDrink}</h1>
-                    </div>
-                )
-            })}
-        </div >
+        <div>
+            <div className="spinnerContainer">
+                {loading && <ReactBootstrap.Spinner animation="border" />}
+            </div>
+            <div className="cardsDisplayContainer">
+                {apiResult.map(item => {
+                    return (
+                        <div className="cardsItemContainer" key={item[0].idDrink}>
+                            <img src={item[0].strDrinkThumb} alt="food thumbnail" />
+                            <h1>{item[0].strDrink}</h1>
+                        </div>
+                    )
+                })}
+            </div >
+        </div>
     )
 }
 

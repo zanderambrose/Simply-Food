@@ -1,4 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /* Global Styles */
+body{
+    font-family: "roboto";
+}
+
 li{
     cursor: pointer;
+}
+
+h1{
+    font-family: "Hind Siliguri";
+    line-height: 1;
+}
+
+.spinnerContainer {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
 }

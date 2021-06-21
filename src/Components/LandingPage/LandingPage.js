@@ -17,7 +17,7 @@ function LandingPage() {
                         spy={true}
                         smooth={true}
                         offset={0}
-                        duration={500}><input type="button" value="Get Started" /></Link>
+                        duration={500}><input type="button" value="Get Started" className="landingPageBtn" /></Link>
                 </div>
             </div>
             <Icons id="icons" />

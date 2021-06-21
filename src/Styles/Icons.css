@@ -16,14 +16,34 @@
     box-shadow: 0px 6px 15px 5px rgba(0, 0, 0, 0.158);
 }
 
+.iconCard a{
+    text-decoration: none;
+    color: black;
+}
+
 .iconCard:hover{
     transform: scale(1.075);
-    box-shadow: 1px 2px 10px red;
+    box-shadow: 1px 2px 10px #6a040f;
     transition: all 0.15s ease-in-out;
+}
+
+.icons p{
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .iconImg{
     width: 150px;
+}
+
+.iconsBtn{
+    background-color: #f5b20a;
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    margin-top: 0.75rem;
+    border: none;
+    border-radius: 5px;
 }
 
 @media (max-width: 700px){

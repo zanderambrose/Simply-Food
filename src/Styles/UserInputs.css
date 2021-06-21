@@ -40,7 +40,7 @@
 .userInputSubmit{
     border-radius: 20px;
     padding: 0.25rem 1.5rem;
-    background-color: orange;
+    background-color: #ffba08;
 }
 
 .userInputSubmit:hover{

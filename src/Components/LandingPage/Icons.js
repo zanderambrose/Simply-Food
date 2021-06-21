@@ -12,19 +12,22 @@ function Icons() {
                 <div className="iconCard"><Link to="/pantry">
                     <img className="iconImg" src={PantryImg} alt='Pantry' />
                     <h3>Whats in your pantry</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Enter the ingredients you have in your pantry and we will send you back a list of recipes to try out!</p>
+                    <button className="iconsBtn">Get Started</button>
                 </Link>
                 </div>
                 <div className="iconCard"><Link to="/inspired">
                     <img className="iconImg" src={GetInspired} alt="burger and fries" />
                     <h3>Get Inspired</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Get inpsired with meal ideas based on the type of meal or cuisine you would like to try.  You can even click for a random meal!</p>
+                    <button className="iconsBtn">Get Started</button>
                 </Link>
                 </div>
                 <div className="iconCard"><Link to="/cocktail">
                     <img className="iconImg" src={Cocktail} alt="cocktail" />
                     <h3>Make a cocktail</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p>Search for a special cocktail based on the ingredients you have or by type of drink you would like to make!</p>
+                    <button className="iconsBtn">Get Started</button>
                 </Link>
                 </div>
             </div>

@@ -9,7 +9,7 @@ const CallToAction = () => {
                 <p>Stay up to date with our newest features and special promotions </p>
             </div>
             <div className="ctaEmail">
-                <input type="text" />
+                <input type="text" placeholder="Enter your email address" />
                 <button>Sign Me Up</button>
             </div>
         </div>

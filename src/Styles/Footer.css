@@ -1,10 +1,103 @@
 /* CALL TO ACTION STYLES*/
+.cta{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    text-align: center;
+    background-color: #f5f6f7;
+}
 
+.cta h1{
+    font-size: 2.75rem;
+}
+
+.ctaEmail input{
+    width: 25vw;
+    outline: none;
+    margin-right: 1rem;
+    border-radius: 0px;
+    border: 1px solid black;
+    padding: 0.5rem 0;
+    background-color: rgb(241, 240, 240);
+}
+
+.ctaEmail button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1.5rem;
+}
+
+.ctaEmail button:hover{
+    transform: scale(1.05);
+}
 
 
 
 /* SOCIAL LINKS STYLES */
 
 .socialLinksContainer{
-    margin: 4rem 0;
+    padding: 3rem 0 3rem 0;
+    background-color: #010413;
+    color: white;
+}
+
+.socialIcons{
+    color: #ffba08;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0 0;
+}
+
+.socialIcons span{
+    padding: 0 1rem;
+}
+
+.socialIcons span:hover{
+    transform: scale(1.1);
+}
+
+.facebook:hover{
+    color: #4267B2
+}
+
+.pinterest:hover{
+    color: #E60023
+}
+
+.instagram:hover{
+    color: 	#d62976
+}
+
+.twitter:hover{
+    color: #1DA1F2
+}
+
+.socialLinks ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.socialLinks ul li{
+    margin: 0 2rem 2rem 0;
+    font-weight: bold;
+}
+
+.socialLinks ul li:hover{
+    color: #d00000
+}
+
+/* COPYRIGHT STLYES */
+
+.copyright{
+    background-color: #ffba08;
+    display: flex;
+    justify-content: center;
+    padding: 1.25rem 0;
+    font-size: 1.15rem;
 }

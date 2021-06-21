@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import '../../Styles/CardsDisplay.css'
 
 
+
 const RandomRender = (props) => {
     const apiResult = props.apiData
     const [displayApiData, setDisplayApiData] = useState([])

@@ -6,10 +6,10 @@ const SocialLinks = () => {
     return (
         <div className="socialLinksContainer">
             <div className="socialIcons">
-                <FaFacebook />
-                <FaPinterest />
-                <FaInstagram />
-                <FaTwitter />
+                <span className="facebook"><FaFacebook size={30} /></span>
+                <span className="pinterest"><FaPinterest size={30} /></span>
+                <span className="instagram"><FaInstagram size={30} /></span>
+                <span className="twitter"><FaTwitter size={30} /></span >
             </div>
             <div className="socialLinks">
                 <ul>

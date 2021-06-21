@@ -2,18 +2,20 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../../Styles/CardsDisplay.css'
+import * as ReactBootstrap from 'react-bootstrap'
 
 
 function DisplayData(props) {
     const string = props.saveState
     const [dataId, setDataId] = useState([])
+    const [loading, setLoading] = useState(false)
 
-    // axios.get(`https://api.spoonacular.com/recipes/${item}/information?apiKey=4e345a393bbd462182c89705d3914f24&includeNutrition=false`)
 
     useEffect(() => {
         let queryString = string.trim().replace(/,/gi, '').split(' ').join(',+')
         const fetchProducts = async () => {
             try {
+                setLoading(true)
                 const fetchData = await axios.get(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=4e345a393bbd462182c89705d3914f24&ingredients=${queryString}&number=4`)
                 // Fetch api data and update data state if success
                 if (fetchData.data.length !== 0) {
@@ -31,11 +33,13 @@ function DisplayData(props) {
                                 containerArr.push(recipeSearchWithId.data)
                             }
                             await setDataId(containerArr)
+                            setLoading(false)
 
                         }
                         catch (error) {
-                            console.log(error)
+                            alert(error)
                             setDataId(['Sorry no information'])
+                            setLoading(false)
                         }
                     }
                     fetchDataId()
@@ -45,31 +49,36 @@ function DisplayData(props) {
                 }
             }
             catch (error) {
-                console.log(error)
+                alert(error)
             }
         }
         fetchProducts()
     }, [string])
 
     return (
-        <div className="cardsDisplayContainer">
-            {dataId.map((item, index) => {
-                if (dataId.length === 4) {
-                    return (
-                        <div className="cardsItemContainer" href={item.sourceUrl} rel="noreferrer" target="_blank" key={item.id}>
-                            <img className="manipulateDataImage" src={item.image} alt="The recipe" />
-                            <h1 className="manipulateDataHeading">{item.title}</h1>
-                        </div>
-
-                    )
-                } else {
-                    return (
-                        <div key={index} className="errorContainer">
-                            <h1>{dataId[0]}</h1>
-                        </div>
-                    )
-                }
-            })}
+        <div>
+            <div className="spinnerContainer">
+                {loading && <ReactBootstrap.Spinner animation="border" />}
+            </div>
+            <div className="cardsDisplayContainer">
+                {dataId.map((item, index) => {
+                    if (dataId.length === 4) {
+                        return (
+                            <div className="cardsItemContainer" href={item.sourceUrl} rel="noreferrer" target="_blank" key={item.id}>
+                                <img className="manipulateDataImage" src={item.image} alt="The recipe" />
+                                <h1 className="manipulateDataHeading">{item.title}</h1>
+                                <a href={item.spoonacularSourceUrl} target='_blank' rel="noreferrer"><button>Click for Recipe</button></a>
+                            </div>
+                        )
+                    } else {
+                        return (
+                            <div key={index} className="errorContainer">
+                                <h1>{dataId[0]}</h1>
+                            </div>
+                        )
+                    }
+                })}
+            </div>
         </div>
 
     )

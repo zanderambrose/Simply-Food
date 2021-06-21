@@ -2,14 +2,26 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../../Styles/CardsDisplay.css'
-
+import * as ReactBootstrap from 'react-bootstrap'
+// import { Button, Modal } from 'react-bootstrap'
 
 const IngredientsRender = (props) => {
     const ingredientsInputValue = props.ingredientsPropValue.split(' ').join('_')
     const [apiResult, setApiResult] = useState([])
+    const [loading, setLoading] = useState(false)
+    // const [modal, setModal] = useState(false)
+
+    // const handleModalBtn = () => {
+    //     setModal(true)
+    // }
+
+    // const handleModalExit = () => {
+    //     setModal(false)
+    // }
     useEffect(() => {
         const fetchIngredientsApi = async () => {
             try {
+                setLoading(true)
                 // Get api result based on user input
                 if (ingredientsInputValue) {
                     const ingredientsApiResult = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredientsInputValue}`)
@@ -27,6 +39,7 @@ const IngredientsRender = (props) => {
                                 containerArr.push(apiIdItem.data.drinks)
                             }
                             await setApiResult(containerArr)
+                            setLoading(false)
                         } catch (error) {
                             console.log(error)
                         }
@@ -42,16 +55,29 @@ const IngredientsRender = (props) => {
     }, [ingredientsInputValue])
 
     return (
-        <div className="cardsDisplayContainer">
-            {apiResult.map(item => {
-                return (
-                    <div className="cardsItemContainer" key={item[0].idDrink}>
-                        <img src={item[0].strDrinkThumb} alt="food thumbnail" />
-                        <h1>{item[0].strDrink}</h1>
-                    </div>
-                )
-            })}
-        </div >
+        <div>
+            <div className="spinnerContainer">
+                {loading && <ReactBootstrap.Spinner animation="border" />}
+            </div>
+            <div className="cardsDisplayContainer">
+                {apiResult.map(item => {
+                    return (
+                        <div className="cardsItemContainer" key={item[0].idDrink}>
+                            <img src={item[0].strDrinkThumb} alt="food thumbnail" />
+                            <h1>{item[0].strDrink}</h1>
+                            {/* <Button onClick={handleModalBtn}>Click for recipe</Button>
+                            <Modal show={modal}>
+                                <Modal.Header>{item[0].strDrink}</Modal.Header>
+                                <Modal.Body>This is the body</Modal.Body>
+                                <Modal.Footer>
+                                    <Button onClick={handleModalExit}>Exit</Button>
+                                </Modal.Footer>
+                            </Modal> */}
+                        </div>
+                    )
+                })}
+            </div >
+        </div>
 
     )
 }
