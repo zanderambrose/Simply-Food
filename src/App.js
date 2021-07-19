@@ -4,7 +4,7 @@ import Footer from './Components/Footer/Footer'
 import LandingPage from './Components/LandingPage/LandingPage'
 import Pantry from './Components/Pantry/Pantry'
 import GetInspired from './Components/GetInspired/GetInspired'
-import Cocktail from './Components/Cocktail/Cocktail'
+import JoinTheFamily from './Components/JoinTheFamily/JoinTheFamily'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
             <Route path="/inspired">
               <GetInspired />
             </Route>
-            <Route path="/cocktail">
-              <Cocktail />
+            <Route path="/signup">
+              <JoinTheFamily />
             </Route>
           </Switch>
         </div>

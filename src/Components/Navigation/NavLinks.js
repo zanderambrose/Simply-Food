@@ -8,7 +8,7 @@ function NavLinks() {
         <ul className='nav-list'>
             <Link to="/pantry"><li>Whats in your pantry</li></Link>
             <Link to="/inspired"><li>Get Inspired</li></Link>
-            <Link to="/cocktail"><li>Make a cocktail</li></Link>
+            <Link to="/signup"><li>Join the family</li></Link>
         </ul>
     )
 }

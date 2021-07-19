@@ -23,10 +23,10 @@ function Icons() {
                     <button className="iconsBtn">Get Started</button>
                 </Link>
                 </div>
-                <div className="iconCard"><Link to="/cocktail">
+                <div className="iconCard"><Link to="/signup">
                     <img className="iconImg" src={Cocktail} alt="cocktail" />
-                    <h3>Make a cocktail</h3>
-                    <p>Search for a special cocktail based on the ingredients you have or by type of drink you would like to make!</p>
+                    <h3>Join the Family</h3>
+                    <p>Sign up to recieve exclusive offers and discount prices.  Don't miss out on the best we have to offer! </p>
                     <button className="iconsBtn">Get Started</button>
                 </Link>
                 </div>
