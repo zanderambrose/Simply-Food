@@ -3,5 +3,5 @@ Food and recipe web application built with React Js.  Get inspired to cook new f
 Hosted Project Link:
 https://simply-food.netlify.app/
 
-simplyFood.png<img width="1440" alt="simplyFood" src="https://user-images.githubusercontent.com/80290101/129258519-c064f0cb-f2fe-483b-bc53-88e7dd836e6a.png">
+<img width="1440" alt="simplyFood" src="https://user-images.githubusercontent.com/80290101/129258519-c064f0cb-f2fe-483b-bc53-88e7dd836e6a.png">
 
